@@ -40,7 +40,7 @@ from .items import (
     TResponseInputItem,
 )
 from .lifecycle import AgentHooks, RunHooks
-from .memory import Session, SQLiteSession
+from .memory import HubSlice, MemoryHub, Session, SQLiteSession
 from .model_settings import ModelSettings
 from .models.interface import Model, ModelProvider, ModelTracing
 from .models.openai_chatcompletions import OpenAIChatCompletionsModel
@@ -115,6 +115,13 @@ from .tracing import (
 )
 from .usage import Usage
 from .version import __version__
+from .virtual_department import (
+    DepartmentAgent,
+    build_c_level,
+    build_head,
+    build_micro_agent,
+    build_taskmaster,
+)
 
 
 def set_default_openai_key(key: str, use_for_tracing: bool = True) -> None:
@@ -213,6 +220,13 @@ __all__ = [
     "AgentHooks",
     "Session",
     "SQLiteSession",
+    "MemoryHub",
+    "HubSlice",
+    "DepartmentAgent",
+    "build_micro_agent",
+    "build_taskmaster",
+    "build_head",
+    "build_c_level",
     "RunContextWrapper",
     "TContext",
     "RunErrorDetails",

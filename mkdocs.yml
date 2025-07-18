@@ -72,6 +72,7 @@ plugins:
                     - models/index.md
                     - models/litellm.md
                 - config.md
+                - virtual_department.md
                 - visualization.md
                 - release.md
                 - Voice agents:
@@ -167,6 +168,7 @@ plugins:
                     - models/index.md
                     - models/litellm.md
                 - config.md
+                - virtual_department.md
                 - visualization.md
                 - 音声エージェント:
                     - voice/quickstart.md
